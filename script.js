@@ -1,8 +1,8 @@
 
 // 1. KONEKSI SUPABASE
 
-const SUPABASE_URL = "URL_SUPABASE";
-const SUPABASE_KEY = "ANON_KEY";
+const SUPABASE_URL = "https://hdkxooaeecnwcrrcsjle.supabase.co";
+const SUPABASE_KEY = "sb_publishable_YDlVgdOl9LJPK1yQRr_JUw_bD66IyQb";
 
 const db = supabase.createClient(
     SUPABASE_URL,
