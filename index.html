@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Kasir Makanan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>🍽️ Sistem Kasir Makanan</h1>
+            <p>Kelola data makanan dengan mudah</p>
+        </header>
+
+        <section class="form-card">
+            <h2 id="formTitle">Tambah Data Makanan</h2>
+
+            <form id="foodForm">
+                <input type="hidden" id="id_makanan">
+
+                <label>Nama Makanan</label>
+                <input type="text" id="nama_makanan"
+                    placeholder="Masukkan nama makanan" required>
+
+                <label>Harga Makanan</label>
+                <input type="number" id="harga"
+                    placeholder="Masukkan harga" min="1" required>
+
+                <div class="form-buttons">
+                    <button type="submit" id="saveBtn">
+                        + Tambah Makanan
+                    </button>
+
+                    <button type="button" id="cancelBtn"
+                        class="cancel" hidden>
+                        Batal
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section class="table-card">
+            <h2>Daftar Makanan</h2>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID Makanan</th>
+                            <th>Nama Makanan</th>
+                            <th>Harga</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="foodTable">
+                        <tr>
+                            <td colspan="4">Memuat data...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p id="message"></p>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
